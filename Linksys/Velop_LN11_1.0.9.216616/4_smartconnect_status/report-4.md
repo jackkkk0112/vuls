@@ -51,5 +51,5 @@ Linksys Velop LN11 1.0.9.216616 was discovered to contain an authenticated root 
 ### Reference
 
 - https://www.linksys.com/
-- https://github.com/<USERNAME>/vuln/blob/main/Linksys/Velop_LN11_1.0.9.216616/4_smartconnect_status/report-4.md
+- https://github.com/jackkkk0112/vuls/blob/main/Linksys/Velop_LN11_1.0.9.216616/4_smartconnect_status/report-4.md
 - Vendor notified 2026-09; vendor replied "no issue found" after approximately one month

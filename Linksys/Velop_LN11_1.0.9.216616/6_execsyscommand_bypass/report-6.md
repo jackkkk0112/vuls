@@ -51,5 +51,5 @@ Linksys Velop LN11 1.0.9.216616 was discovered to contain a root command executi
 ### Reference
 
 - https://www.linksys.com/
-- https://github.com/<USERNAME>/vuln/blob/main/Linksys/Velop_LN11_1.0.9.216616/6_execsyscommand_bypass/report-6.md
+- https://github.com/jackkkk0112/vuls/blob/main/Linksys/Velop_LN11_1.0.9.216616/6_execsyscommand_bypass/report-6.md
 - Vendor notified 2026-09; vendor replied "no issue found" after approximately one month
