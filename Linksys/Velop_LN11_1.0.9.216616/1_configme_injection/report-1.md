@@ -42,7 +42,7 @@ CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H (6.8; the poisoning stage itself re
 
 Stage 1 (no credentials), MQTT publish to topic network/master/CONFIG-ME/subdev/owned/status with payload {"type":"status","uuid":";id>/tmp/pwned_LN11;uptime>>/tmp/pwned_LN11","data":{"pin":"1234"}}; the broker accepts the anonymous write (the payload contains no spaces: the value passes through an unquoted sysevent assignment, so spaces would be word-split). Stage 2, an authenticated JNAP StartSmartConnectServer request (wiredEnabled=true, pin=1234) triggers execution. Result read back on the device: /tmp/pwned_LN11 contains uid=0(root) gid=0(root); the sysevent key is cleared after consumption. Verified on 2026-10-13.
 
-PoC script: [poc.py](poc.py) - Screenshot: [screenshot.md](screenshot.md) (replace with screenshot.png)
+PoC script: [poc.py](poc.py) - Screenshot: [screenshot.png](screenshot.png)
 
 ### Description
 
