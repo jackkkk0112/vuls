@@ -46,6 +46,8 @@ CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H (8.8; BLE radio range, zero credent
 
 Verified on physical devices on 2026-09-17 (LN11 1.0.9.216616 in Master mode via the WAN-unplug advertising window, and LN12 1.0.1.213146 in unconfigured mode): a benign round trip returned the btjnap authentication error (channel works, authentication is enforced inside btjnap only); the injection round returned uid=0(root) gid=0(root) via the GATT readback; on-device /tmp/poc_b1_out contained the command output. Static re-check of LN12 1.0.8.216033 (latest): the sprintf/popen/fgets chain is preserved byte-for-byte.
 
+PoC script: [poc.py](poc.py) - Verification transcript: [poc_log.txt](poc_log.txt) (original forensic log, LN11 Master via WAN-unplug window; BLE addresses and credentials redacted) - Screenshot: [screenshot.md](screenshot.md) (replace with screenshot.png)
+
 ### Description
 
 Linksys Velop LN11/LN12 was discovered to contain a pre-authentication root command injection vulnerability via single-quote closure in the BLE btsetup provisioning peripheral, with in-band output readback
