@@ -15,3 +15,4 @@ Directory layout: `Vendor/Product_FirmwareVersion/vuln_folder/` — one folder p
 | [report-5](Linksys/Velop_LN11_1.0.9.216616/5_smartconnect_client/report-5.md) | JNAP `nodes/smartconnect/BTRequestStartSmartConnectClient` | `setupAP` | Command injection |
 | [report-6](Linksys/Velop_LN11_1.0.9.216616/6_execsyscommand_bypass/report-6.md) | JNAP `diagnostics/ExecSysCommand` | `cmd` / `param` | Command execution (whitelist bypass via path normalization) |
 | [report-7](Linksys/Velop_LN11_1.0.9.216616/7_container_traversal/report-7.md) | `GET /cgi-bin/container.cgi` | `c_name` | Path traversal |
+| [report-8](Linksys/Velop_LN11_1.0.9.216616/8_ble_btsetup_preauth_injection/report-8.md) | BLE GATT service 0x2080 (`btsetup`, no pairing) | `X-JNAP-Authorization` header | Command injection (pre-auth, in-band readback) |
